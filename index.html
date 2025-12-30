@@ -6,97 +6,228 @@
     <title>Karthik U | Portfolio</title>
     <style>
         :root {
-            --primary: #2c3e50;
-            --accent: #3498db;
-            --text: #333;
-            --bg: #f4f7f6;
+            --primary: #1a2a6c;
+            --secondary: #b21f1f;
+            --accent: #fdbb2d;
+            --text: #2d3436;
+            --bg: #ffffff;
         }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: var(--text); background: var(--bg); margin: 0; padding: 0; }
-        header { background: var(--primary); color: white; padding: 2rem 0; text-align: center; }
-        .container { max-width: 800px; margin: auto; padding: 20px; }
-        section { background: white; margin-bottom: 20px; padding: 25px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        h1, h2, h3 { color: var(--primary); }
-        header h1 { color: white; margin: 0; }
-        .contact-info { margin-top: 10px; font-size: 0.9rem; }
-        .contact-info a { color: #ecf0f1; text-decoration: none; margin: 0 10px; }
-        .job-title { font-weight: bold; color: var(--accent); }
-        .date { font-style: italic; color: #7f8c8d; font-size: 0.9rem; }
-        ul { padding-left: 20px; }
-        .project-tag { display: inline-block; background: #e1e8ed; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; margin-right: 5px; }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            background: linear-gradient(to right, #1a2a6c, #b21f1f, #fdbb2d);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--accent);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+        }
+
+        .contact-links {
+            margin-top: 15px;
+        }
+
+        .contact-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+            border-bottom: 1px transparent solid;
+        }
+
+        .contact-links a:hover {
+            border-bottom: 1px white solid;
+        }
+
+        section {
+            background: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: var(--primary);
+            border-left: 5px solid var(--secondary);
+            padding-left: 15px;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+        }
+
+        .exp-item {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .exp-item:last-child { border-bottom: none; }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+        }
+
+        .job-title {
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: var(--secondary);
+        }
+
+        .date {
+            color: #636e72;
+            font-size: 0.9rem;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .project-card {
+            background: #fdfdfd;
+            border: 1px solid #eee;
+            padding: 20px;
+            border-radius: 8px;
+            transition: transform 0.2s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+        }
+
+        .tag {
+            display: inline-block;
+            background: #eee;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            margin-top: 10px;
+            color: #555;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #95a5a6;
+            font-size: 0.8rem;
+        }
     </style>
 </head>
 <body>
 
 <header>
-    [cite_start]<h1>Karthik U [cite: 1]</h1>
-    <div class="contact-info">
-        [cite_start]<span>📍 Varikoli, Kerala, India [cite: 2]</span> | 
-        [cite_start]<a href="mailto:karthikadoor20@gmail.com">📧 karthikadoor20@gmail.com [cite: 3]</a> | 
-        [cite_start]<span>📞 +91 8281628198 [cite: 4]</span>
-        <br>
-        [cite_start]<a href="https://linkedin.com/in/karthik-u-aa24441a2">🔗 LinkedIn [cite: 5]</a>
+    <h1>KARTHIK U</h1>
+    <p>Electronics & Communication Engineer | Robotics & Embedded Systems</p>
+    <div class="contact-links">
+        <a href="mailto:karthikadoor20@gmail.com">Email</a>
+        <a href="https://linkedin.com/in/karthik-u-aa24441a2">LinkedIn</a>
+        <span>📍 Kerala, India</span>
     </div>
 </header>
 
 <div class="container">
-    <section>
-        <h2>Summary</h2>
-        [cite_start]<p>Electronics and Communication Engineering undergraduate at Muthoot Institute of Technology and Science with strong technical and leadership skills[cite: 7]. [cite_start]Experienced in embedded systems and program coordination, with a passion for STEM, robotics, cryptography, and inclusion[cite: 8].</p>
+    <section id="summary">
+        <h2>Professional Summary</h2>
+        <p>Undergraduate at Muthoot Institute of Technology and Science with strong technical and leadership skills. Experienced in embedded systems and program coordination. Passionate about STEM, robotics, cryptography, and inclusion.</p>
     </section>
 
-    <section>
+    <section id="experience">
         <h2>Experience</h2>
         
-        <div>
-            [cite_start]<p class="job-title">SSK FELLOW - KSUM [cite: 12]</p>
-            [cite_start]<p class="date">June 2025 – Ongoing [cite: 21]</p>
+        <div class="exp-item">
+            <div class="job-header">
+                <span class="job-title">SSK FELLOW | KSUM</span>
+                <span class="date">June 2025 - Ongoing</span>
+            </div>
             <ul>
-                [cite_start]<li>Led democratization initiatives for the Kerala education department[cite: 22].</li>
-                [cite_start]<li>Executed Tinkering Labs under a World Bank Funded Project[cite: 22].</li>
-                [cite_start]<li>Focused on Project Management, Curriculum building, and Social Entrepreneurship[cite: 23, 24].</li>
+                <li>Led democratization initiatives for Kerala education department.</li>
+                <li>Executed Tinkering Labs under World Bank Funded Project.</li>
+                <li>Focus: Project Management, Curriculum building, and Social Entrepreneurship.</li>
             </ul>
         </div>
 
-        <div>
-            [cite_start]<p class="job-title">Chair - IEEE RAS SBC MITS [cite: 13]</p>
-            [cite_start]<p class="date">Feb 2024 – Feb 2025 [cite: 25]</p>
+        <div class="exp-item">
+            <div class="job-header">
+                <span class="job-title">Chair | IEEE RAS SBC MITS</span>
+                <span class="date">Feb 2024 - Feb 2025</span>
+            </div>
             <ul>
-                [cite_start]<li>Led Robotics & Automation initiatives and executed technical projects[cite: 26, 27].</li>
-                [cite_start]<li>Directed planning and volunteer engagement[cite: 28].</li>
+                <li>Led Robotics & Automation initiatives and executed technical projects.</li>
+                <li>Directed planning and volunteer engagement.</li>
             </ul>
         </div>
 
-        <div>
-            [cite_start]<p class="job-title">Summer Intern - CIDRE, MITS [cite: 19]</p>
-            [cite_start]<p class="date">March 2022 – Dec 2022 [cite: 35]</p>
-            <ul>
-                [cite_start]<li>R&D and prototyping for tea-harvesting automation[cite: 36].</li>
-            </ul>
+        <div class="exp-item">
+            <div class="job-header">
+                <span class="job-title">Summer Intern | CIDRE, MITS</span>
+                <span class="date">Mar 2022 - Dec 2022</span>
+            </div>
+            <p>Conducted R&D and prototyping for tea-harvesting automation.</p>
         </div>
     </section>
 
-    <section>
+    <section id="projects">
         <h2>Key Projects</h2>
-        [cite_start]<h3>Tea Harvester [cite: 39]</h3>
-        [cite_start]<p>Designed a mobile machine to automate tea harvesting on slopes, integrating mechanics and sensors for terrain adaptation[cite: 40, 41].</p>
-        <div>
-            [cite_start]<span class="project-tag">CAD</span><span class="project-tag">Gyroscopes</span><span class="project-tag">Sensors</span> [cite: 42]
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Tea Harvester</h3>
+                <p>Designed a mobile machine to automate tea harvesting on slopes. Integrated mechanics and sensors for terrain adaptation.</p>
+                <span class="tag">CAD</span> <span class="tag">Verilog</span> <span class="tag">Sensors</span>
+            </div>
+            <div class="project-card">
+                <h3>Cryptographic Algorithm (FPGA)</h3>
+                <p>Implemented AES encryption and key generation in Verilog on Zynq boards using Vivado.</p>
+                <span class="tag">FPGA</span> <span class="tag">Vivado</span> <span class="tag">Verilog</span>
+            </div>
+            <div class="project-card">
+                <h3>Underwater Drone</h3>
+                <p>Received a grant of $1000 USD from IEEE RAS TB for research and development.</p>
+                <span class="tag">Robotics</span> <span class="tag">Grant Funded</span>
+            </div>
+            <div class="project-card">
+                <h3>Accident Alert System</h3>
+                <p>Built GPS and sensor-based crash detection with alerting using Arduino and Blynk.</p>
+                <span class="tag">IoT</span> <span class="tag">Arduino</span>
+            </div>
         </div>
-
-        [cite_start]<h3>Underwater Drone [cite: 47]</h3>
-        [cite_start]<p>Received a grant of $1,000 Dollars from IEEE RAS TB for development[cite: 48].</p>
-
-        [cite_start]<h3>Cryptographic Algorithm on FPGA [cite: 44]</h3>
-        [cite_start]<p>Implemented AES encryption and key generation in Verilog on Zynq boards using Vivado[cite: 45].</p>
     </section>
 
-    <section>
+    <section id="education">
         <h2>Education</h2>
-        [cite_start]<p><strong>B.Tech in Electronics and Communication Engineering</strong> [cite: 10]<br>
-        [cite_start]Muthoot Institute of Technology and Science, Varikoli [cite: 10]</p>
-        [cite_start]<p><strong>Higher Secondary Education (Bio-science)</strong>: 97% (2019-2021) [cite: 10]</p>
+        <p><strong>B.Tech in Electronics and Communication Engineering</strong><br>
+        Muthoot Institute of Technology and Science</p>
+        <p><strong>Higher Secondary Education (Bio-science)</strong>: 97% (2019-2021)</p>
     </section>
 </div>
+
+<footer>
+    &copy; 2025 Karthik U. Designed as a professional portfolio.
+</footer>
 
 </body>
 </html>
